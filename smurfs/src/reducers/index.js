@@ -2,12 +2,12 @@ import { START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE } from "../actions";
 
 //initial state using expected data from API docs and possible states:initial, loading, success, error
 const initialState = {
-    smurfsData: {
+    smurfsData: [{
     name: "Ari",
     age: 200,
     height: "5cm",
     id: 0
-  },
+  }],
   isFetching: false,
   error: "initial error"
 };
@@ -37,6 +37,17 @@ const reducer = (state = initialState, action) => {
           isFetching: false,
           error: action.payload
         };
+    //     case "ADD_NEW_SMURF":
+    //   const newSmurf = {
+    //     item: action.payload,
+    //     completed: false,
+    //     id: Date.now()
+    //   };
+    //   return {
+    //     ...state,
+    //     todos: [...state.todos, newTodo]
+    //   };
+
       default:
         return state;
     }

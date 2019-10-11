@@ -20,7 +20,10 @@ const Smurfs = props => {
         {/* error state set up*/}
         {props.error && <p>{props.error}</p>}
         {/* success state set up*/}
-         <Smurf smurf={props} />
+        {props.smurfsData.map(item => (
+        <Smurf key={item.id} item={item} />
+      ))}
+         {/* <Smurf smurf={props} /> */}
       </div>
     )};
 };
