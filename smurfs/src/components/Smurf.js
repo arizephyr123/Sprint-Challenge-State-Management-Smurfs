@@ -1,13 +1,21 @@
-import React from 'react';
+import React from "react";
 
 const Smurf = props => {
-    console.log(props);
-    return(
+  //console.log("Smurf props:", props);
+  console.log("props.smurf.smurfsData.name:", props.smurf.smurfsData.name);
+  return (
+    <div>
+      {props.smurf.smurfsData.name ? (
         <div>
-        {props.smurf.name ? (<div><p>Name: {props.smurf.name}</p><p>Age: {props.smurf.age}</p><p>Height: {props.smurf.height}</p></div>) : <p>Nothing</p>}
+          <p>Name: {props.smurf.smurfsData.name}</p>
+          <p>Age: {props.smurf.smurfsData.name}</p>
+          <p>Height: {props.smurf.smurfsData.name}</p>
         </div>
-        
-    )
-    }
+      ) : (
+        <p>Nothing</p>
+      )}
+    </div>
+  );
+};
 
-    export default Smurf;
+export default Smurf;
