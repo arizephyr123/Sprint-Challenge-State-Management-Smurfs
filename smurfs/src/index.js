@@ -12,6 +12,7 @@ import rootReducer from './reducers'
 //import provider then wrap App below and pass in store
 import { Provider } from 'react-redux';
 
+//create store, pass in rootReducer and applyMiddleware
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   rootReducer,
